@@ -1,34 +1,49 @@
 # Instal WSL
+```powershell
 wsl --unregister Ubuntu-20.04
 
-
 wsl --list --onlin
-wsl --install -d Ubuntu-20.04
-wsl --list
 
+wsl --install -d Ubuntu-20.04
+
+wsl --list
+```
+
+![image](https://user-images.githubusercontent.com/79700810/196971403-0b6f821b-07d8-4896-8875-8e17e578f909.png)
 
 # Install Docker
+```
 sudo -i
 apt-get update
 apt-get install -y ca-certificates curl gnupg lsb-release
+```
 
+![image](https://user-images.githubusercontent.com/79700810/196971710-b2e502cf-285a-42b1-8a83-ba462fe037aa.png)
+
+```
 mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-
-
+```
+```
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
+```
+```
 apt-get update
 apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
 
+![image](https://user-images.githubusercontent.com/79700810/196971959-4b2a40e3-5803-4ada-91eb-62b4fe15e5d5.png)
 
+```
 service docker start
+```
 
-#
+# Create folder
 
+```
 mkdir /home/user/docker
 chmod -R 777 /home/user/docker/
-
+```
 
 ## Dockerfile
 
