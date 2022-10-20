@@ -45,6 +45,9 @@ mkdir /home/user/docker
 chmod -R 777 /home/user/docker/
 ```
 
+![image](https://user-images.githubusercontent.com/79700810/196972322-82cf36d4-ad0c-4f89-ac51-770f1b4ed6f3.png)
+
+
 ## Dockerfile
 
 hello.py
