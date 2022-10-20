@@ -15,7 +15,7 @@ kubectl-vsphere login --insecure-skip-tls-verify --server=10.174.72.209
 
 ![image](https://user-images.githubusercontent.com/79700810/196872137-33d381b0-d489-4df2-a5db-ed72cbafdde0.png)
 
-``
+```
 kubectl config get-contexts
 kubectl config use-context sk8s1
 ```
