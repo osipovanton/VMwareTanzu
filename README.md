@@ -1,1 +1,1 @@
-# VMwareTanzu
+# VMware Tanzu
