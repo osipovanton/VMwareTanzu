@@ -96,7 +96,7 @@ apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 service docker start
 ```
 
-
+![image](https://user-images.githubusercontent.com/79700810/196972322-82cf36d4-ad0c-4f89-ac51-770f1b4ed6f3.png)
 
 
 ### Запуск контейнера
@@ -1033,7 +1033,7 @@ mkdir /home/user/docker
 chmod -R 777 /home/user/docker/
 ```
 
-![image](https://user-images.githubusercontent.com/79700810/196972322-82cf36d4-ad0c-4f89-ac51-770f1b4ed6f3.png)
+
 
 ### Установка VS Code WSL
 
