@@ -43,20 +43,33 @@
 
 Контейнеры помогают ускорить конвейеры разработки, оптимизируя циклы разработки/тестирования и сокращая усилия, необходимые для развертывания приложений. Они последовательно выполняются в каждом развертывании, обеспечивая переносимость между платформами и между облаками. Контейнеры повышают эффективность и гибкость организации.
 
-## Instal WSL
+## Что такое подсистема Windows для Linux?
+
+Подсистема Windows для Linux позволяет разработчикам запускать среду GNU/Linux, включая большинство инструментов, утилит и приложений командной строки, непосредственно в Windows, без изменений, без накладных расходов, связанных с традиционной виртуальной машиной или двойной загрузкой.
+
+![image](https://user-images.githubusercontent.com/79700810/197137387-cbcb947b-c538-4592-840a-45d58ca29626.png)
+
+### Установка WSL
+
 ```powershell
-wsl --unregister Ubuntu-20.04
-
-wsl --list --onlin
-
-wsl --install -d Ubuntu-20.04
-
-wsl --list
+wsl --list --online
 ```
 
-![image](https://user-images.githubusercontent.com/79700810/196971403-0b6f821b-07d8-4896-8875-8e17e578f909.png)
+![image](https://user-images.githubusercontent.com/79700810/197135769-23c61728-cd98-4668-b4dc-c66c027f59b8.png)
 
-# Install Docker
+```powershell
+wsl --install -d Ubuntu-20.04
+```
+
+![image](https://user-images.githubusercontent.com/79700810/197136903-f91333e0-a798-43bd-8a65-e3b60eb453ce.png)
+
+После перезагрузки запускается консоль для конфигурации WSL
+
+![image](https://user-images.githubusercontent.com/79700810/197138559-da84f76f-7ce7-4c68-ae1e-44a8d23f24f9.png)
+
+
+### Установка Docker в WSL
+
 ```
 sudo -i
 apt-get update
