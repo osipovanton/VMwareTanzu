@@ -87,7 +87,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
 ```
 ```
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
 ![image](https://user-images.githubusercontent.com/79700810/196971959-4b2a40e3-5803-4ada-91eb-62b4fe15e5d5.png)
@@ -96,7 +96,7 @@ apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 service docker start
 ```
 
-# Create folder
+### Создание директориии и права доступа
 
 ```
 mkdir /home/user/docker
