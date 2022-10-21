@@ -635,11 +635,87 @@ docker inspect greeting
 
 Измените местоположение на подкаталог 
 
+```
+mkdir /appHello
+chmod +x /appHello
+```
+
+![image](https://user-images.githubusercontent.com/79700810/197184416-aa9afcb0-ef1b-4ba3-bb6c-32f75fcf4fcc.png)
+
+Dockerfile определяет детали базового образа, из которого должен быть создан новый образ контейнера, а также инструкции по его созданию. Просмотрите содержимое Dockerfile, запустив:
+
+```
+vim /appHello/Dockerfile
+```
+
+```
+FROM busybox:latest
+COPY hello goodbye /
+CMD [ "/hello" ]
+```
+
+![image](https://user-images.githubusercontent.com/79700810/197184552-a98876e5-a44c-427f-8e68-f635e876f207.png)
+
+
+
+Инструкция FROM в Dockerfile дает имя базового образа.
+
+Инструкция COPY используется для копирования файлов из локального каталога в образ.
+Примечание: данные файлы должны быть созданные в этой директории и назначены права
+
+![image](https://user-images.githubusercontent.com/79700810/197188595-91b4ba8c-fcdd-4333-a218-0e45f8f33bcb.png)
+
+
+
+Инструкция CMD используется для установки команды, которая должна быть запущена, если образ контейнера запускается без указания явной команды.
+
+
+
+Чтобы создать образ контейнера, используя инструкции в Dockerfile, выполните:
+
+```docker
+docker build -t greeting .
+```
+
+![image](https://user-images.githubusercontent.com/79700810/197187972-7fcddcca-7a46-4c77-987c-7a3f66ac3c06.png)
+
+
+Посмотрите на слои образа контейнера, запустив:
+
+![image](https://user-images.githubusercontent.com/79700810/197188152-fb71d1d9-6e3d-4e56-922c-deeefc5d8198.png)
+
+
+Вы можете видеть, что в образе контейнера был создан слой для операторов COPY и CMD из нашего Dockerfile.
+
+
+Чтобы запустить образ контейнера, запустите:
+
+```docker
+docker run --rm greeting
+```
+
+![image](https://user-images.githubusercontent.com/79700810/197188788-2c02adda-8eae-454a-a1a6-4565cd2adb89.png)
+
+Или для запуска альтернативной команды используйте:
+
+```docker
+docker run --rm greeting /goodbye
+```
+
+
+![image](https://user-images.githubusercontent.com/79700810/197188884-ef3d878e-bea3-40c2-bb37-0c7c2f003448.png)
+
+
+Полный список инструкций, которые вы можете использовать в файле Docker, см. в справочнике по [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)..
 
 
 
 
 
+
+
+
+!!!!!!!
 
 ### Создание директориии и права доступа
 
